@@ -1,0 +1,27 @@
+######################################
+### Files that git-add should ignore
+
+*.db
+*.opendb
+*.obj
+*.lib
+*.dll
+*.tlog
+*.log
+*.user
+*.manifest
+*.res
+*.pdb
+*.exe
+*.ncb
+*.sdf
+*.suo
+*.lastbuildstate
+*.opensdf
+ipch
+UpgradeReport.*
+debug
+release
+Debug
+Release
+_UpgradeReport_Files
