@@ -10,7 +10,7 @@ EyelinkHRT* hrt;
 static LiteTracker* lt;
 static bool is_initialized = false;
 
-void cleanup();
+static void cleanup();
 
 void init(int tracking_eye){
 	mexLock(); // new addition: locks mex file from being cleared.
