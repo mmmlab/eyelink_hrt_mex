@@ -5,7 +5,7 @@
 #pragma once
 #include <cstdio>
 #include <string>
-#include <eyelink/core_expt.h>
+#include <core_expt.h>
 #include "Point2D.h"
 
 class LiteTracker{

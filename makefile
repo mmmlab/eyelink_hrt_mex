@@ -1,13 +1,13 @@
-# MEX Makefile for MATLAB
+# MEX Makefile for MATLAB on OSX
 
 # First, define various system paths
 ## Define the output path for the mex module
 MODULES_PATH = /Users/melchi/Documents/MATLAB
 ## Define MATLAB library and include paths
-MLROOT = /Applications/MATLAB_R2018b.app
+MLROOT = /Applications/MATLAB_R2017a.app
 MLINCLUDE = $(MLROOT)/extern/include
 MLBIN = $(MLROOT)/extern/bin/maci64
-MLLIB = $(MLROOT)/extern/lib/maci64
+MLLIB = $(MLROOT)/bin/maci64
 ## Define Eyelink library and include paths
 ELROOT = /Library/Frameworks/eyelink_core.framework
 ELLIB = $(ELROOT)
@@ -38,7 +38,7 @@ INCLUDES = -I$(SRCPATH) -I$(MLINCLUDE) -I$(ELINCLUDE)
 # linker flags for mex libraries
 LIBRARIES = -L$(MLLIB) -lmx -lmex -lmat
 # ... and for Eyelink library
-LIBRARIES += -L$(ELLIB) -leyelink_core
+LIBRARIES += $(ELLIB)/eyelink_core
 # ... and for standard libraries
 LIBRARIES += -lstdc++ -lpthread
 

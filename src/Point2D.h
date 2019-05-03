@@ -77,7 +77,7 @@ public:
 		lhs.y = -lhs.y;
 		return lhs;
 	}
-	friend Point2D operator+(Point2D &lhs,Point2D &rhs){
+	friend Point2D operator+(Point2D lhs,Point2D rhs){
 		return Point2D(lhs.x+rhs.x,lhs.y+rhs.y);
 	}
 	Point2D& operator+=(Point2D &rhs){
@@ -85,13 +85,13 @@ public:
 		this->y+=rhs.y;
 		return *this;
 	}
-	friend Point2D operator+(Point2D &lhs,double rhs){
+	friend Point2D operator+(Point2D lhs,double rhs){
 		return Point2D(lhs.x+rhs,lhs.y+rhs);
 	}
-	friend Point2D operator-(Point2D &lhs,double rhs){
+	friend Point2D operator-(Point2D lhs,double rhs){
 		return Point2D(lhs.x-rhs,lhs.y-rhs);
 	}
-	friend Point2D operator-(Point2D &lhs,Point2D &rhs){
+	friend Point2D operator-(Point2D lhs,Point2D rhs){
 		return Point2D(lhs.x-rhs.x,lhs.y-rhs.y);
 	}
 	Point2D& operator-=(Point2D &rhs){
@@ -99,7 +99,7 @@ public:
 		this->y-=rhs.y;
 		return *this;
 	}
-	friend Point2D operator*(Point2D &lhs,double rhs){
+	friend Point2D operator*(Point2D lhs,double rhs){
 		return Point2D(lhs.x*rhs,lhs.y*rhs);
 	}
 	Point2D& operator*=(double &rhs){
@@ -107,7 +107,7 @@ public:
 		this->y*=rhs;
 		return *this;
 	}
-	friend Point2D operator/(Point2D &lhs,double rhs){
+	friend Point2D operator/(Point2D lhs,double rhs){
 		return Point2D(lhs.x/rhs,lhs.y/rhs);
 	}
 	Point2D& operator/=(double &rhs){
@@ -115,7 +115,7 @@ public:
 		this->y/=rhs;
 		return *this;
 	}
-	friend Point2D operator*(double lhs,Point2D &rhs){
+	friend Point2D operator*(double lhs,Point2D rhs){
 		return Point2D(lhs*rhs.x,lhs*rhs.y);
 	}
 	friend std::ifstream &operator>>(std::ifstream &fs, Point2D &rhs){
