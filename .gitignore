@@ -18,6 +18,8 @@
 *.suo
 *.lastbuildstate
 *.opensdf
+obj
+lib
 ipch
 UpgradeReport.*
 debug
