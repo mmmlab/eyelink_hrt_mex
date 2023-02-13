@@ -18,6 +18,7 @@
 *.suo
 *.lastbuildstate
 *.opensdf
+*.sln
 obj
 lib
 ipch

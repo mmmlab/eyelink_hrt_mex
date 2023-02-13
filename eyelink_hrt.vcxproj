@@ -79,9 +79,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>./src;$(MELCHI_INCLUDE);$(BOOST_INCLUDE);$(MATLAB_INCLUDE_x64);$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+    <IncludePath>./src;$(EYELINK_INCLUDE);$(MELCHI_INCLUDE);$(BOOST_INCLUDE);$(MATLAB_INCLUDE_x64);$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
     <TargetExt>.mexw64</TargetExt>
-    <LibraryPath>$(MELCHI_LIB_x64);$(BOOST_LIB_x64);$(MATLAB_LIB_x64);$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(EYELINK_LIB_x64);$(MELCHI_LIB_x64);$(BOOST_LIB_x64);$(MATLAB_LIB_x64);$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
