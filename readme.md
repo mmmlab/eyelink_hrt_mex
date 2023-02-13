@@ -22,7 +22,7 @@ which is accessed via the commands `eyelink_hrt('start',TRACKING_EYE)` and `eyel
 
 Note that this code does not include any provisions for setting up or calibrating the Eyelink tracker. That's because it's meant as a complement to the Eyelink Toolbox, and we expect that the Toolbox will be used for all non time-critical functions. If you run the `eyelink_hrt` commands without first initializing and calibrating the Eyelink tracker, it will connect to the tracker and return results, but those results will be meaningless.
 
-Instead, we expect users to execute configuration and setup code via the Eyelink Toolbox *before* issuing any `eyelink_hrt` calls. Here's an example of a typical setup procedure to configure the Eyelink and establish a connection:
+Instead, we expect users to execute configuration and setup code via the Eyelink Toolbox *before* issuing any `eyelink_hrt` calls. Here's an example of a typical setup procedure using the Eyelink Toolbox to configure the Eyelink and establish a connection:
 
 ```
     % Initialize 'el' eyelink struct with proper defaults for output to
