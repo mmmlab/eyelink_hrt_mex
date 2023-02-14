@@ -52,7 +52,21 @@ Instead, we expect users to execute configuration and setup code via the Eyelink
     result = Eyelink('StartSetup',1);
     Eyelink('StartRecording');
 ```
+*********
+### Compilation Notes
+This code compiles and has been tested on Windows and MacOS/OSX (Intel).
 
+Compilation on either system requires that you have the Eyelink SDK installed (you can download a copy of the current version from the [SR Research Support Forum](https://www.sr-research.com/support/)). 
+
+You'll also need to have a C/C++ compiler installed. The included project file and makefile are designed to be used with Microsoft VCPP and XCode, respectively. You can download a free version of VCPP as part of Microsoft's [Community Edition of Visual Studio](https://visualstudio.microsoft.com/vs/community/).
+
+Additionally:
+- if installing on MacOS, you'll have to change the `MLROOT` variable in the Makefile to point to the root directory of your MATLAB installation
+- if installing on Windows, you'll have to define the following environment variables (if you've never done this, you can find a comprehensive tutorial [here](https://docs.oracle.com/en/database/oracle/machine-learning/oml4r/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0)):
+    - `EYELINK_INCLUDE` which should point to the "include" path in the installed Eyelink SDK (this should be something like `C:\\Program Files\\SR Research\\Eyelink\\Includes\\eyelink`)
+    - `EYELINK_LIB_x64` which should point to the "libs" path in the installed Eyelink SDK (this should be something like `C:\\Program Files\\SR Research\\Eyelink\\libs\\x64`)
+    - `MATLAB_INCLUDE` which should point to the "include" path in your MATLAB installation (this should be something like `C:\\Program Files\\MATLAB\\R2022b\\extern\\include`)
+    - `MATLAB_LIB_x64` which should point to the "libs" path in your MATLAB installation (this should be something like `C:\\Program Files\\MATLAB\\R2022b\\extern\\win64\\microsoft`)
 
 
 
