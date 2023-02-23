@@ -12,8 +12,9 @@
 #include "LiteTracker.h"
 
 #if (__cplusplus > 199711L)
-	#include<chrono>
-	#include<thread>
+	#include <chrono>
+	#include <thread>
+	#include <mutex>
 	namespace stdx = std;
 #else
 // Import boost libraries (unnecessary if compiling under C++11 or later)
